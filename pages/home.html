@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icone.png" type="image/x-icon">
+    <title>Cadastro de Pedido</title>
+    <link rel="stylesheet" href="../style/home.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Pedido</h2>
+        <form id="form-pedido">
+            <div class="form-group">
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <select id="produto" name="produto" required>
+                    <option value="">Selecione o Produto</option>
+                    <option value="Hamburguer">Hamburguer</option>
+                    <option value="X-Burguer">X-Burguer</option>
+                    <option value="X-Salada">X-Salada</option>
+                    <option value="X-Bacon">X-Bacon</option>
+                    <option value="X-Egg">X-Egg</option>
+                    <option value="X-Tudo">X-Tudo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Gerar Pedido</button>
+            </div>
+        </form>
+
+        <div id="carrinho">
+            <h3>Carrinho de Compras</h3>
+            <div id="carrinho-itens"></div>
+        </div>
+
+        <div class="columns">
+            <div class="column" id="emExecucao">
+                <h2>Pedidos em Execução</h2>
+                <div id="listagemExecucao"></div>
+            </div>
+            
+            <div class="column" id="emEntrega">
+                <h2>Pedidos em Entrega</h2>
+                <div id="listagemEntrega"></div>
+            </div>
+
+            <div class="column" id="finalizados">
+                <h2>Pedidos Finalizados</h2>
+                <div id="listagemFinalizados"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/home.js"></script>
+</body>
+</html>
